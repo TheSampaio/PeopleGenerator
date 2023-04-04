@@ -38,7 +38,7 @@
             txt_Age = new TextBox();
             label4 = new Label();
             label5 = new Label();
-            txt_Birthday = new TextBox();
+            txt_Anniversary = new TextBox();
             txt_MaritalStatus = new TextBox();
             label6 = new Label();
             rdo_Male = new RadioButton();
@@ -153,18 +153,18 @@
             label5.TabIndex = 2;
             label5.Text = "Birthday: ";
             // 
-            // txt_Birthday
+            // txt_Anniversary
             // 
-            txt_Birthday.BackColor = Color.White;
-            txt_Birthday.BorderStyle = BorderStyle.FixedSingle;
-            txt_Birthday.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_Birthday.Location = new Point(463, 139);
-            txt_Birthday.Margin = new Padding(4);
-            txt_Birthday.MaxLength = 30;
-            txt_Birthday.Name = "txt_Birthday";
-            txt_Birthday.ReadOnly = true;
-            txt_Birthday.Size = new Size(125, 25);
-            txt_Birthday.TabIndex = 1;
+            txt_Anniversary.BackColor = Color.White;
+            txt_Anniversary.BorderStyle = BorderStyle.FixedSingle;
+            txt_Anniversary.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_Anniversary.Location = new Point(463, 139);
+            txt_Anniversary.Margin = new Padding(4);
+            txt_Anniversary.MaxLength = 30;
+            txt_Anniversary.Name = "txt_Anniversary";
+            txt_Anniversary.ReadOnly = true;
+            txt_Anniversary.Size = new Size(125, 25);
+            txt_Anniversary.TabIndex = 1;
             // 
             // txt_MaritalStatus
             // 
@@ -192,7 +192,7 @@
             // 
             rdo_Male.AutoSize = true;
             rdo_Male.Checked = true;
-            rdo_Male.Location = new Point(399, 363);
+            rdo_Male.Location = new Point(399, 359);
             rdo_Male.Name = "rdo_Male";
             rdo_Male.Size = new Size(51, 19);
             rdo_Male.TabIndex = 3;
@@ -203,7 +203,7 @@
             // rdo_Female
             // 
             rdo_Female.AutoSize = true;
-            rdo_Female.Location = new Point(399, 388);
+            rdo_Female.Location = new Point(399, 384);
             rdo_Female.Name = "rdo_Female";
             rdo_Female.Size = new Size(63, 19);
             rdo_Female.TabIndex = 3;
@@ -222,7 +222,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(txt_MaritalStatus);
-            Controls.Add(txt_Birthday);
+            Controls.Add(txt_Anniversary);
             Controls.Add(txt_Age);
             Controls.Add(txt_Income);
             Controls.Add(txt_Occupation);
@@ -250,7 +250,7 @@
         private TextBox txt_Age;
         private Label label4;
         private Label label5;
-        private TextBox txt_Birthday;
+        private TextBox txt_Anniversary;
         private TextBox txt_MaritalStatus;
         private Label label6;
         private RadioButton rdo_Male;

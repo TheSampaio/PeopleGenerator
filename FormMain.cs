@@ -258,10 +258,10 @@ namespace PeopleGenerator
             // Choose between male and female and randomize a complete name
             txt_Name.Text = RandomName(rdo_Male.Checked) + " " + RandomSurname() + " " + RandomSurname();
 
-            // Calculates age and birthday date
+            // Calculates age and anniversary
             short Age = (short)Random.Next(18, 60);
             txt_Age.Text = Convert.ToString(Age);
-            txt_Birthday.Text = Convert.ToString(Random.Next(1, 28)) + "/" + Convert.ToString(Random.Next(1, 12)) + "/" + Convert.ToString(DateTime.Now.Year - Age);
+            txt_Anniversary.Text = Convert.ToString(Random.Next(1, 28)) + "/" + Convert.ToString(Random.Next(1, 12)) + "/" + Convert.ToString(DateTime.Now.Year - Age);
 
             // Choose between single and married 
             txt_MaritalStatus.Text = (Random.Next(0, 9) <= 4) ? "Single" : "Married";
