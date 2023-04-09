@@ -88,7 +88,7 @@
             txt_Occupation.BackColor = Color.White;
             txt_Occupation.BorderStyle = BorderStyle.FixedSingle;
             txt_Occupation.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_Occupation.Location = new Point(103, 160);
+            txt_Occupation.Location = new Point(103, 158);
             txt_Occupation.Margin = new Padding(4);
             txt_Occupation.MaxLength = 30;
             txt_Occupation.Name = "txt_Occupation";
@@ -99,7 +99,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(21, 170);
+            label2.Location = new Point(21, 168);
             label2.Name = "label2";
             label2.Size = new Size(75, 15);
             label2.TabIndex = 2;
@@ -110,7 +110,7 @@
             txt_Income.BackColor = Color.White;
             txt_Income.BorderStyle = BorderStyle.FixedSingle;
             txt_Income.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_Income.Location = new Point(103, 193);
+            txt_Income.Location = new Point(103, 191);
             txt_Income.Margin = new Padding(4);
             txt_Income.MaxLength = 30;
             txt_Income.Name = "txt_Income";
@@ -121,7 +121,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(21, 203);
+            label3.Location = new Point(21, 201);
             label3.Name = "label3";
             label3.Size = new Size(53, 15);
             label3.TabIndex = 2;
