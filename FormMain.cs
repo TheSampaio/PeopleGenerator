@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Reflection;
 
 // Store an occupation with name and salary
-struct Occupation
+readonly struct Occupation
 {
     // Attributes
     public readonly string Name;
@@ -22,13 +22,12 @@ namespace PeopleGenerator
     public partial class FormMain : Form
     {
         // Attributes
-        Random Random = new Random();
+        readonly Random Random = new();
+        readonly List<string> MaleNames = new();
+        readonly List<string> FemaleNames = new();
 
-        List<string> MaleNames = new List<string>();
-        List<string> FemaleNames = new List<string>();
-
-        List<string> Surnames = new List<string>();
-        List<Occupation> Occupations = new List<Occupation>();
+        readonly List<string> Surnames = new();
+        readonly List<Occupation> Occupations = new();
 
         string TemporaryName = "None";
 
@@ -253,23 +252,23 @@ namespace PeopleGenerator
             return Occupations.ElementAt(Random.Next(0, Occupations.Count));
         }
 
-        private void btn_Generate_Click(object sender, EventArgs e)
+        private void Btn_Generate_Click(object sender, EventArgs e)
         {
             // Choose between male and female and randomize a complete name
-            txt_Name.Text = RandomName(rdo_Male.Checked) + " " + RandomSurname() + " " + RandomSurname();
+            Txt_Name.Text = RandomName(Rdo_Male.Checked) + " " + RandomSurname() + " " + RandomSurname();
 
             // Calculates age and anniversary
             short Age = (short)Random.Next(18, 60);
-            txt_Age.Text = Convert.ToString(Age);
-            txt_Anniversary.Text = Convert.ToString(Random.Next(1, 28)) + "/" + Convert.ToString(Random.Next(1, 12)) + "/" + Convert.ToString(DateTime.Now.Year - Age);
+            Txt_Age.Text = Convert.ToString(Age);
+            Txt_Anniversary.Text = Convert.ToString(Random.Next(1, 28)) + "/" + Convert.ToString(Random.Next(1, 12)) + "/" + Convert.ToString(DateTime.Now.Year - Age);
 
             // Choose between single and married 
-            txt_MaritalStatus.Text = (Random.Next(0, 9) <= 4) ? "Single" : "Married";
+            Txt_MaritalStatus.Text = (Random.Next(0, 9) <= 4) ? "Single" : "Married";
 
             // Randomize an occupation and get its salary per year
             Occupation OccupationCache = RandomOccupation();
-            txt_Occupation.Text = OccupationCache.Name;
-            txt_Income.Text = "£ " + OccupationCache.Salary;
+            Txt_Occupation.Text = OccupationCache.Name;
+            Txt_Income.Text = "£ " + OccupationCache.Salary;
         }
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -279,7 +278,7 @@ namespace PeopleGenerator
                 "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
 
             // Verify if user want to close the window
-            e.Cancel = (Result == DialogResult.No) ? true : false;
+            e.Cancel = (Result == DialogResult.No);
         }
     }
 }
